@@ -1,4 +1,3 @@
-// src/services/api.js
 import axios from 'axios';
 
 const API = axios.create({
@@ -41,5 +40,13 @@ export const getTasks = async (token) => {
   const response = await API.get('/tasks', {
     headers: { Authorization: `Bearer ${token}` },
   });
+  return response.data;
+};
+
+//افزودن تسک
+export const addTask = async (token, title) => {
+  console.log('sending title:', title);
+  console.log('with token:', token);
+  const response = await API.post('/tasks', title);
   return response.data;
 };

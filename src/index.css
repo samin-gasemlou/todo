@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'yekanBold';
+  src: url('../public/fonts/woff2/YekanBakh-Black.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'yekan';
+  src: url('../public/fonts/woff2/YekanBakh-Regular.woff2') format('woff2');
+}

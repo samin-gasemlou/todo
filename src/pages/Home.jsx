@@ -56,10 +56,10 @@ function Home() {
     <div className="bg-[#F9FAFB] w-full h-dvh flex flex-col items-center justify-start">
       <Header />
       <QouteBox />
-      <ul>
-        {tasks.map((t) => (
-          <li key={t.tid}>{t.title}</li>
-        ))}
+      <ul className=" w-[90%] flex flex-col items-center justify-center gap-2 mt-4">
+        <li className="bg-[#ffffff] w-full rounded-[8px] flex flex-row items-center justify-center  py-4 pr-3 font-[yekan] text-[17px]">
+          1404/6/25
+        </li>
       </ul>
       <AddBtn />
     </div>

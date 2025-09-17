@@ -7,4 +7,7 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  fontFamily: {
+    yekan: ['yekanBold', 'yekan'],
+  },
 };
