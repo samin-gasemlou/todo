@@ -35,13 +35,9 @@ function AddTasks() {
           onChange={(e) => setTitle(e.target.value)}
           placeholder="تسک جدیدت..."
         />
-        <input
-          className="bg-[#FFFFFF] rounded-[8px] w-[90%] h-[79px] p-4 font-[yekan] text-[#6B7280]"
-          type="date"
-        />
         <SaveBtn />
       </form>
-      <Link to="/tasks">
+      <Link to="/">
         <div className="bg-[#ffffff] rounded-[8px] text-[#0EA5E9] py-2 px-4 font-[yekan] text-[18px] border-[#0EA5E9]">
           😍کلیک کن تسک هاتو ببین
         </div>

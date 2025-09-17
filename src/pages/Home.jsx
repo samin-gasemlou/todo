@@ -25,7 +25,6 @@ function Home() {
         });
 
         if (res.status === 401) {
-          // توکن منقضی یا نامعتبر
           localStorage.removeItem('token');
           navigate('/sign-or-register');
           return;
@@ -52,15 +51,26 @@ function Home() {
 
   if (error) return <p style={{ color: 'red' }}>{error}</p>;
 
+  // تاریخ‌های یکتا از تسک‌ها
+  const uniqueDates = [...new Set(tasks.map((task) => task.date))];
+
   return (
     <div className="bg-[#F9FAFB] w-full h-dvh flex flex-col items-center justify-start">
       <Header />
       <QouteBox />
+
       <ul className=" w-[90%] flex flex-col items-center justify-center gap-2 mt-4">
-        <li className="bg-[#ffffff] w-full rounded-[8px] flex flex-row items-center justify-center  py-4 pr-3 font-[yekan] text-[17px]">
-          1404/6/25
-        </li>
+        {uniqueDates.map((date) => (
+          <li
+            key={date}
+            onClick={() => navigate(`/tasks/${date}`)}
+            className="bg-[#ffffff] w-full rounded-[8px] flex flex-row items-center justify-center  py-4 pr-3 font-[yekanBold] text-[#111827] text-[17px] cursor-pointer"
+          >
+            {date}
+          </li>
+        ))}
       </ul>
+
       <AddBtn />
     </div>
   );
