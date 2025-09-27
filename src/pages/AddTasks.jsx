@@ -1,5 +1,4 @@
 import SaveBtn from '../components/SaveBtn';
-import Header from '../components/Header';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 function AddTasks() {
@@ -21,14 +20,13 @@ function AddTasks() {
     }
   };
   return (
-    <div className="bg-[#F9FAFB] w-full h-dvh flex flex-col items-center justify-start">
-      <Header />
+    <div className="w-full h-dvh flex flex-col items-center justify-start">
       <form
         onSubmit={handleAddTask}
-        className="w-[90%] h-[50%] flex flex-col items-center justify-center gap-10 my-8"
+        className="w-[90%] h-[50%] flex flex-col items-center justify-center gap-10 my-8 "
       >
         <input
-          className="bg-[#FFFFFF] rounded-[8px] w-[90%] h-[79px] pr-4 font-[yekan]"
+          className="bg-[#1B263B] text-[#ffffff] rounded-[8px] w-[80%] h-[79px] pr-4 font-[yekan] motion-preset-bounce  "
           dir="rtl"
           type="text"
           value={title}
@@ -38,8 +36,8 @@ function AddTasks() {
         <SaveBtn />
       </form>
       <Link to="/">
-        <div className="bg-[#ffffff] rounded-[8px] text-[#0EA5E9] py-2 px-4 font-[yekan] text-[18px] border-[#0EA5E9]">
-          😍کلیک کن تسک هاتو ببین
+        <div className="bg-[#162447] rounded-[8px] text-[#ffffff] py-2 px-4 font-[yekan] text-[18px] border-[#0EA5E9] motion-preset-bounce ">
+          لیست تسک ها
         </div>
       </Link>
     </div>

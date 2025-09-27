@@ -2,7 +2,7 @@ function SaveBtn() {
   return (
     <button
       type="submit"
-      className="w-[80%] h-[68px] rounded-[8px] bg-[#0EA5E9] flex items-center justify-center text-[18px] font-[yekanBold] text-[#ffffff]"
+      className="w-[60%] h-[68px] rounded-[8px] bg-[#1E90FF] flex items-center justify-center text-[18px] font-[yekanBold] text-[#ffffff] motion-preset-compress "
     >
       ذخیره
     </button>

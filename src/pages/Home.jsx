@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from '../components/Header';
 import QouteBox from '../components/QouteBox';
 import AddBtn from '../components/AddBtn';
 
@@ -55,8 +54,7 @@ function Home() {
   const uniqueDates = [...new Set(tasks.map((task) => task.date))];
 
   return (
-    <div className="bg-[#F9FAFB] w-full h-dvh flex flex-col items-center justify-start">
-      <Header />
+    <div className="w-full h-dvh flex flex-col items-center justify-start">
       <QouteBox />
 
       <ul className=" w-[90%] flex flex-col items-center justify-center gap-2 mt-4">
@@ -64,7 +62,7 @@ function Home() {
           <li
             key={date}
             onClick={() => navigate(`/tasks/${date}`)}
-            className="bg-[#ffffff] w-full rounded-[8px] flex flex-row items-center justify-center  py-4 pr-3 font-[yekanBold] text-[#111827] text-[17px] cursor-pointer"
+            className="bg-[#1B263B] w-full rounded-[8px] flex flex-row items-center justify-center border-[#1E90FF] py-4 pr-3 font-[yekanBold] text-[#FFFFFF] text-[17px] cursor-pointer motion-preset-pop "
           >
             {date}
           </li>

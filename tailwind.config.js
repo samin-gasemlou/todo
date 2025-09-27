@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('tailwindcss-motion')],
   fontFamily: {
     yekan: ['yekanBold', 'yekan'],
   },

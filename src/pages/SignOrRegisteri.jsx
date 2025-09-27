@@ -11,8 +11,8 @@ function SignOrRegister() {
   }, [navigate]);
 
   return (
-    <div className="w-full h-dvh flex flex-col items-center justify-start bg-gradient-to-t from-[#6365f19c] to-[#6365f19c]  bg-[#6365f197]">
-      <div className="logo mt-10">
+    <div className="w-full h-dvh flex flex-col items-center justify-start bg-[#0B0C10]">
+      <div className="logo mt-10 motion-preset-bounce  ">
         <img className="object-cover" src="logo.png" alt="logo" />
       </div>
       <div className="w-full text-center mt-6">
@@ -26,13 +26,13 @@ function SignOrRegister() {
       <div className="w-full flex flex-col items-center justify-center mt-6">
         <button
           onClick={() => navigate('/login')}
-          className="px-28 py-6 bg-[#ffffff] text-[#0EA5E9] font-inter font-extrabold text-[18px] rounded-[25px]"
+          className="px-28 py-6 bg-[#162447] text-[#ffffff] font-inter font-extrabold text-[18px] rounded-[25px] motion-preset-pop"
         >
           Sign In
         </button>
         <button
           onClick={() => navigate('/register')}
-          className="px-28 py-6 bg-[#ffffff] text-[#0EA5E9] font-inter font-extrabold text-[17px] rounded-[25px] mt-4 mb-4"
+          className="px-28 py-6 bg-[#162447] text-[#ffffff] font-inter font-extrabold text-[17px] rounded-[25px] mt-4 mb-4 motion-preset-pop"
         >
           Register
         </button>
