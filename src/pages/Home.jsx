@@ -17,7 +17,7 @@ function Home() {
           return;
         }
 
-        const res = await fetch('http://localhost:5000/api/tasks', {
+        const res = await fetch('https://todo-back-production-609b.up.railway.app/api/tasks', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

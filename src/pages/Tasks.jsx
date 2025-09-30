@@ -12,7 +12,7 @@ function Tasks() {
   const deleteTask = async (tid) => {
     const token = localStorage.getItem('token');
     try {
-      const res = await fetch(`http://localhost:5000/api/tasks/${tid}`, {
+      const res = await fetch(`https://todo-back-production-609b.up.railway.app/api/tasks/${tid}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -28,10 +28,13 @@ function Tasks() {
   const toggleComplete = async (task) => {
     const token = localStorage.getItem('token');
     try {
-      const res = await fetch(`http://localhost:5000/api/tasks/${task.tid}/complete`, {
-        method: 'PUT',
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const res = await fetch(
+        `https://todo-back-production-609b.up.railway.app/api/tasks/${task.tid}/complete`,
+        {
+          method: 'PUT',
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
       const updatedTask = await res.json();
       if (res.ok) {
         setTasks((prev) => prev.map((t) => (t.tid === task.tid ? updatedTask : t)));
@@ -44,14 +47,17 @@ function Tasks() {
   const handleSaveEdit = async (updatedTask) => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://localhost:5000/api/tasks/${updatedTask.tid}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ title: updatedTask.title }),
-      });
+      const res = await fetch(
+        `https://todo-back-production-609b.up.railway.app/api/tasks/${updatedTask.tid}`,
+        {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({ title: updatedTask.title }),
+        }
+      );
 
       const data = await res.json();
 
@@ -72,9 +78,12 @@ function Tasks() {
           return;
         }
 
-        const res = await fetch(`http://localhost:5000/api/tasks/by-date/${date}`, {
-          headers: { Authorization: `Bearer ${token}` },
-        });
+        const res = await fetch(
+          `https://todo-back-production-609b.up.railway.app/api/tasks/by-date/${date}`,
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        );
 
         if (!res.ok) throw new Error('Failed to fetch tasks');
 

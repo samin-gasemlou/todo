@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api', // آدرس بک‌اند
+  baseURL: 'https://todo-back-production-609b.up.railway.app', // آدرس بک‌اند
 });
 
 // افزودن توکن به همه درخواست‌ها

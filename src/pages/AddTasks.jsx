@@ -7,7 +7,7 @@ function AddTasks() {
   const handleAddTask = async (e) => {
     e.preventDefault();
     const token = localStorage.getItem('token');
-    const res = await fetch('http://localhost:5000/api/tasks', {
+    const res = await fetch('https://todo-back-production-609b.up.railway.app/api/tasks', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
       body: JSON.stringify({ title }),

@@ -11,7 +11,7 @@ function SignOrRegister() {
   }, [navigate]);
 
   return (
-    <div className="w-full h-dvh flex flex-col items-center justify-start bg-[#0B0C10]">
+    <div className="w-full h-full flex flex-col items-center justify-start bg-[#0B0C10]">
       <div className="logo mt-10 motion-preset-bounce  ">
         <img className="object-cover" src="logo.png" alt="logo" />
       </div>
